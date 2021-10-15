@@ -1,0 +1,1091 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poiret+One&family=Yeseva+One&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+:root {
+    --main-color: #64102d;
+    --weak-main-color: #64102d70;
+    --back-main-color: #64102d1f;
+    --waite-back: #feefec;
+    --second-back: #feefec;
+    --secend-main-color: #ffa0a0;
+}
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: url("./yo/banner-background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.nav {
+    width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    padding-bottom: 0;
+}
+
+.logo {
+    width: 120px;
+    object-fit: contain;
+    margin: 0 100px;
+}
+
+.navitems {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.navitems::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: .3s;
+    top: calc(100% + 5px);
+}
+
+.navitems:hover::after {
+    width: 80%;
+}
+
+.mainbtn {
+    padding: 20px 35px;
+    background-color: var(--main-color);
+    border-radius: 333px;
+}
+
+.mainbtn::after {
+    background-color: transparent;
+}
+
+@media screen and (max-width: 1350px) {
+    .nav {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .logo {
+        width: 80px;
+        margin: 0 0px;
+    }
+    .mainbtn {
+        padding: 10px 15px;
+    }
+}
+
+.navmobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    min-width: 90%;
+}
+
+.navmobile i {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+.navmobileitems {
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    z-index: 9999;
+    top: 0;
+    left: 100vw;
+    background-color: white;
+    padding: calc(5vh) calc(5vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: .3s;
+}
+
+.open {
+    left: 0 !important;
+}
+
+.socialbtns {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.socialbtns a {
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+.socialbtns a i {
+    color: var(--main-color) !important;
+    font-size: 35px !important;
+}
+
+.navmobileitems .navitems {
+    margin-bottom: 50px;
+    color: black;
+}
+
+.navmobileitems .navitems::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 1px;
+    background-color: rgb(0, 0, 0);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: .3s;
+    top: calc(100% + 5px);
+}
+
+.navmobileitems .mainbtn {
+    color: rgb(255, 255, 255);
+}
+
+.navmobileitems .mainbtn::after {
+    background-color: transparent !important;
+}
+
+.close {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 22px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.close i {
+    cursor: pointer;
+    color: black !important;
+}
+
+@media screen and (min-width: 950px) {
+    .navmobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .nav {
+        display: none;
+    }
+}
+
+.hetotiels {
+    font-size: 50px;
+    color: white;
+    font-family: 'Yeseva One', cursive;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.herosubtitel {
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    font-size: 20px;
+    width: 60%;
+}
+
+.herobtn {
+    font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    border-radius: 333px;
+    font-size: 26px;
+    padding: 20px 30px;
+    text-transform: capitalize;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: .3s;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.herobtn i {
+    margin-left: 10px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: .3s;
+}
+
+.herobtn:hover i {
+    margin-left: 25px;
+    margin-right: -5px;
+}
+
+
+/*about*/
+
+.aboutcont {
+    width: 100vw;
+    padding: 50px 0;
+    padding-top: 90px;
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--waite-back);
+}
+
+.about {
+    width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgcont {
+    object-fit: contain;
+    width: 45%;
+    margin-left: -60px;
+    margin-top: -80px;
+}
+
+.textcont {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.titels {
+    font-size: 42px;
+    font-family: 'Yeseva One', cursive;
+    margin-bottom: 60px;
+    color: black;
+}
+
+.titels span {
+    color: var(--main-color);
+}
+
+.thetext {
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    color: rgba(0, 0, 0, 0.63);
+}
+
+.textbtn {
+    font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-transform: capitalize;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: .3s;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.textbtn I {
+    color: var(--main-color);
+    margin-left: 10px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: .3s;
+}
+
+.textbtn:hover i {
+    margin-left: 25px;
+    margin-right: -5px;
+}
+
+@media screen and (max-width: 1350px) {
+    .about {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .insimgcont {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .imgcont {
+        display: none;
+    }
+    .insimgcont {
+        width: 65%;
+        margin-bottom: 50px;
+    }
+    .titels {
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .thetext {
+        text-align: center;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .textcont {
+        width: 90%;
+        align-items: center;
+    }
+}
+
+
+/*about*/
+
+
+/*nuberst*/
+
+.nuberscont {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0;
+    background: url("./yo/Group 5.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.numbers {
+    width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.numberstextcont {
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nm {
+    font-size: 70px;
+    color: white;
+    text-align: center;
+    font-family: 'Yeseva One', cursive;
+    margin-bottom: 20px;
+}
+
+.nmtext {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-family: 'Yeseva One', cursive;
+}
+
+@media screen and (max-width: 1330px) {
+    .nuberscont {
+        padding-top: 0px;
+    }
+    .numbers {
+        width: 90%;
+    }
+    .numberstextcont {
+        margin-top: 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/*nuberst*/
+
+
+/*Services*/
+
+.Servicescont {
+    width: 100vw;
+    padding: 70px 0;
+    padding-bottom: 50px;
+    background-color: var(--waite-back);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.Servicescont::before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    background: url("./yo/2884787_flowers_valentine's day_wedding_icon 1.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 440px;
+}
+
+.Servicescont::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    background: url("./yo/2884787_flowers_valentine's day_wedding_icon 2.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 0;
+    bottom: 0;
+    width: 290px;
+    height: 440px;
+}
+
+.servicetitel {
+    font-size: 42px;
+    font-family: 'Yeseva One', cursive;
+    margin-bottom: 60px;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.service {
+    z-index: 2;
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.srvicewrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.servicecoloms {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background-color: #ffffffd1;
+    transition: .3s;
+    border-radius: 45px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.servicecoloms:hover {
+    background-color: white;
+}
+
+.srvicon {
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.srcolomtitel {
+    color: var(--main-color);
+    font-size: 32px;
+    font-family: 'Yeseva One', cursive;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.srtext {
+    color: rgba(0, 0, 0, 0.281);
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.servicecoloms .textbtn,
+.servicecoloms .textbtn i {
+    color: var(--secend-main-color) !important;
+}
+
+@media screen and (max-width: 1330px) {
+    .service {
+        width: 90%;
+    }
+    .servicecoloms {
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .servicecoloms {
+        width: 100%;
+    }
+}
+
+
+/*Services*/
+
+
+/*Services2*/
+
+.second {
+    background-color: white !important;
+    position: relative;
+}
+
+.second .about {
+    align-items: flex-end;
+}
+
+.second .titels span {
+    color: var(--secend-main-color) !important;
+}
+
+.second .imgcont {
+    margin: 0;
+}
+
+.second::before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    background: url("./yo/2884787_flowers_valentine's day_wedding_icon 1.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 440px;
+}
+
+.second .textcont .textbtn {
+    background-color: var(--main-color);
+    border-radius: 333px !important;
+    color: white !important;
+    padding: 20px 30px;
+}
+
+.second .textcont .textbtn i {
+    color: white !important;
+}
+
+
+/*Services2*/
+
+
+/*procing*/
+
+.pricingcont {
+    position: relative;
+    z-index: 0;
+    width: 100vw;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricingcont::before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    background: url("./yo/2884787_flowers_valentine's day_wedding_icon 1.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 440px;
+}
+
+.pricingcont::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    background: url("./yo/2884787_flowers_valentine's day_wedding_icon 2.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 0;
+    top: 0;
+    width: 290px;
+    height: 440px;
+}
+
+.pricing {
+    z-index: 2;
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricingwrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.pricingcolom {
+    font-family: 'Comfortaa', cursive;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 36px;
+    text-align: center;
+    border: 1px solid var(--main-color);
+    background-color: rgba(255, 255, 255, 0.733);
+}
+
+.firttitel {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    color: var(--main-color);
+    font-weight: 900;
+    -webkit-text-stroke: 2px;
+    display: flex;
+    align-items: baseline;
+}
+
+.firttitel span {
+    font-weight: 400;
+    font-size: 20px;
+    -webkit-text-stroke: 0;
+}
+
+.sectitel {
+    width: calc(100% + 60px);
+    background-color: var(--main-color);
+    padding: 25px 0;
+    color: white;
+    font-size: 24px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.therdtitel {
+    font-size: 20px;
+    color: var(--main-color);
+    padding: 25px 0;
+    width: 70%;
+    border-bottom: 1px solid var(--weak-main-color);
+}
+
+.procingbtn {
+    width: 100%;
+    font-weight: 600;
+    padding: 15px 0;
+    color: var(--main-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    margin-top: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.sp {
+    background-image: linear-gradient(180deg, #ffa0a0, #e16565);
+    border: 1px solid #e16565;
+    background-color: none;
+    transform: scale(1.1);
+}
+
+.sp .firttitel {
+    color: white;
+}
+
+.sp .sectitel {
+    color: white;
+    background-color: #fababa;
+}
+
+.sp .therdtitel {
+    color: rgba(255, 255, 255, 0.767);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.589);
+}
+
+.sp .procingbtn {
+    color: white;
+}
+
+.therfihjgl {
+    border-bottom: none !important;
+}
+
+@media screen and (max-width: 1300px) {
+    .pricing {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1122px) {
+    .firttitel {
+        font-family: 'Roboto', sans-serif;
+        font-size: 40px;
+    }
+    .sectitel {
+        width: calc(100% + 60px);
+        background-color: var(--main-color);
+        padding: 25px 0;
+        color: white;
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .therdtitel {
+        font-size: 17px;
+    }
+    .procingbtn {
+        font-size: 28px;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 996px) {
+    .pricingcolom {
+        min-width: 70%;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .pricingwrap {
+        justify-content: center;
+    }
+    .second .about {
+        align-items: center;
+    }
+}
+
+
+/*Pricing*/
+
+
+/*contactcont*/
+
+.contactcont {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: var(--second-back);
+}
+
+.contactcont::before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    background: url("./yo/2884787_flowers_valentine's day_wedding_icon 1.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 440px;
+}
+
+.contactcont::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    background: url("./yo/Rectangle 7.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 0;
+    bottom: 0;
+    width: 649px;
+    height: 630px;
+    opacity: .7;
+}
+
+.contact {
+    z-index: 2;
+    width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .titels {
+    width: 40%;
+    font-size: 58px;
+    color: black
+}
+
+.contact .titels span {
+    color: var(--secend-main-color)
+}
+
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 35px;
+    background-color: white;
+}
+
+form .titels {
+    position: relative;
+    font-size: 38px !important;
+    justify-self: center;
+    color: var(--main-color) !important;
+    width: max-content !important;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+form input,
+form textarea {
+    width: 70%;
+    font-size: 22px;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.452);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: .3;
+    font-family: 'Comfortaa', cursive;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border: 1px solid var(--main-color);
+}
+
+.submit {
+    background-color: var(--main-color);
+    border-radius: 333px;
+    color: white;
+    border: none;
+    width: 50% !important;
+    font-family: 'Comfortaa', cursive;
+}
+
+@media screen and (max-width: 1350px) {
+    .contact {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .contact {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contactcont::before {
+        display: none;
+    }
+    .contactcont::after {
+        width: 387px;
+        height: 375px;
+    }
+    .contact .titels {
+        width: 90%;
+        font-size: 48px;
+        margin-bottom: 50px;
+        color: black
+    }
+    form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    form input,
+    form textarea {
+        font-size: 18px;
+        padding: 15px;
+        width: 100%;
+    }
+}
+
+
+/*contactcont*/
+
+
+/*foter*/
+
+.fottercont {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    padding-bottom: 20px;
+    background-color: var(--main-color);
+}
+
+.fotter {
+    font-family: 'Comfortaa', cursive;
+    width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fababa63;
+}
+
+.fotterloog {
+    object-fit: contain;
+    width: 100px;
+}
+
+.fotterwraper {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footerrow {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.fotertitel {
+    text-transform: capitalize;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.fotteritems {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.671);
+}
+
+.fottersos a {
+    font-size: 38px;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.allright {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.603);
+    width: 70%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1300px) {
+    .fotter {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 546px) {
+    .fotterwraper {
+        width: fit-content;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 90%;
+        margin: 50px 0;
+    }
+    .fotter {
+        flex-direction: column;
+    }
+}
+
+
+/*foter*/
+
+.nml {
+    margin-left: 30px;
+}
+
+.hmb {
+    margin-bottom: 60px;
+}
+
+.hmt {
+    margin-top: 30px;
+}
+
+.mtauto {
+    margin-top: auto;
+}
+
+.mbauto {
+    margin-bottom: auto;
+}
+
+.nmr {
+    margin-right: 30px;
+}
