@@ -4,15 +4,16 @@ body {
     margin: 0;
     width: 100vw;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 :root {
-    --main-color: #64102d;
-    --weak-main-color: #64102d70;
-    --back-main-color: #64102d1f;
+    --main-color: #d60077;
+    --weak-main-color: #d6007770;
+    --back-main-color: #d600771f;
     --waite-back: #feefec;
     --second-back: #feefec;
-    --secend-main-color: #ffa0a0;
+    --secend-main-color: #fd2c9f;
 }
 
 .hero {
@@ -28,27 +29,37 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    z-index: 1;
+    z-index: 1999;
 }
 
 .nav {
     width: 1300px;
+    position: fixed;
+    top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 0;
-    padding-bottom: 0;
+    padding: 20px;
+    border-radius: 333px;
+    background-color: white;
+    box-shadow: 4px 5px 7px #00000054;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: .3s;
+    z-index: 999;
+}
+
+.navoff {
+    transform: scale(0.0);
 }
 
 .logo {
-    width: 120px;
+    width: 320px;
     object-fit: contain;
-    margin: 0 100px;
 }
 
 .navitems {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     position: relative;
     font-family: 'Comfortaa', cursive;
     font-weight: 400;
@@ -64,7 +75,7 @@ body {
     position: absolute;
     width: 2px;
     height: 1px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     transition-duration: .3s;
     top: calc(100% + 5px);
@@ -78,6 +89,7 @@ body {
     padding: 20px 35px;
     background-color: var(--main-color);
     border-radius: 333px;
+    color: rgb(255, 255, 255);
 }
 
 .mainbtn::after {
@@ -92,7 +104,7 @@ body {
 
 @media screen and (max-width: 1250px) {
     .logo {
-        width: 80px;
+        width: 275px;
         margin: 0 0px;
     }
     .mainbtn {
@@ -104,14 +116,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
+    margin: 10px 5%;
+    background: white;
+    padding: 20px;
+    border-radius: 333px;
     min-width: 90%;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 7px #00000054;
+    position: fixed;
+    top: 30px;
 }
 
 .navmobile i {
-    font-size: 22px;
-    color: white;
+    font-size: 42px;
+    color: var(--main-color);
     cursor: pointer;
+    margin-right: 19px;
 }
 
 .navmobileitems {
@@ -123,7 +144,7 @@ body {
     left: 100vw;
     background-color: white;
     padding: calc(5vh) calc(5vw);
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -132,6 +153,7 @@ body {
 }
 
 .open {
+    display: flex !important;
     left: 0 !important;
 }
 
@@ -204,6 +226,7 @@ body {
 }
 
 .hetotiels {
+    margin-top: 150px;
     font-size: 50px;
     color: white;
     font-family: 'Yeseva One', cursive;
@@ -247,6 +270,40 @@ body {
 .herobtn:hover i {
     margin-left: 25px;
     margin-right: -5px;
+}
+
+@media screen and (max-width: 650px) {
+    .logo {
+        width: 155px;
+        margin: 0 0px;
+    }
+    .navmobile i {
+        font-size: 25px;
+        color: var(--main-color);
+        cursor: pointer;
+        margin-right: 19px;
+    }
+    .navmobile {
+        padding: 10px;
+        top: 20px;
+    }
+    .hetotiels {
+        margin-top: 150px;
+        font-size: 45px;
+    }
+    .herobtn {
+        font-family: 'Comfortaa', cursive;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        border: 1px solid white;
+        border-radius: 333px;
+        font-size: 22px;
+        padding: 10px 20px;
+    }
+    .herosubtitel {
+        width: 90%;
+        font-size: 18px;
+    }
 }
 
 
@@ -513,6 +570,7 @@ body {
     justify-content: center;
     padding: 25px;
     background-color: #ffffffd1;
+    box-shadow: 3px 3px 11px #0000004a;
     transition: .3s;
     border-radius: 45px;
     margin: 0 auto;
@@ -521,6 +579,7 @@ body {
 
 .servicecoloms:hover {
     background-color: white;
+    box-shadow: 0px 0px 11px #0000004a;
 }
 
 .srvicon {
@@ -539,7 +598,7 @@ body {
 }
 
 .srtext {
-    color: rgba(0, 0, 0, 0.281);
+    color: rgb(0 0 0 / 79%);
     font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -740,8 +799,8 @@ body {
 }
 
 .sp {
-    background-image: linear-gradient(180deg, #ffa0a0, #e16565);
-    border: 1px solid #e16565;
+    background-image: linear-gradient(180deg, #fc4ead, #a3045c);
+    border: 1px solid #a3045c;
     background-color: none;
     transform: scale(1.1);
 }
@@ -752,7 +811,7 @@ body {
 
 .sp .sectitel {
     color: white;
-    background-color: #fababa;
+    background-color: rgba(255, 255, 255, 0.281);
 }
 
 .sp .therdtitel {
@@ -978,7 +1037,7 @@ form textarea:focus {
     align-items: center;
     padding: 100px 0;
     padding-bottom: 20px;
-    background-color: var(--main-color);
+    background-color: white;
 }
 
 .fotter {
@@ -988,12 +1047,12 @@ form textarea:focus {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 50px;
-    border-bottom: 1px solid #fababa63;
+    border-bottom: 1px solid rgba(48, 48, 48, 0.486);
 }
 
 .fotterloog {
     object-fit: contain;
-    width: 100px;
+    width: 300px;
 }
 
 .fotterwraper {
@@ -1014,7 +1073,7 @@ form textarea:focus {
 .fotertitel {
     text-transform: capitalize;
     font-size: 20px;
-    color: white;
+    color: var(--main-color);
     text-decoration: none;
     margin-bottom: 20px;
 }
@@ -1024,12 +1083,12 @@ form textarea:focus {
     margin-bottom: 10px;
     font-size: 18px;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.671);
+    color: rgba(0, 0, 0, 0.671);
 }
 
 .fottersos a {
     font-size: 38px;
-    color: white;
+    color: var(--main-color);
     text-decoration: none;
     margin: 0 10px;
 }
@@ -1038,7 +1097,7 @@ form textarea:focus {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin-top: 20px;
-    color: rgba(255, 255, 255, 0.603);
+    color: rgba(0, 0, 0, 0.603);
     width: 70%;
     text-align: center;
 }
